@@ -115,6 +115,15 @@ export default {
         </h4>
 
         <ContactCard :contact="activeContact" />
+        <router-link
+          class="mt-2 badge badge-warning"
+          :to="{
+            name: 'contact.edit',
+            params: { id: activeContact._id },
+          }"
+        >
+          <i class="fas fa-edit"></i> Hiệu chỉnh
+        </router-link>
       </div>
     </div>
   </div>
